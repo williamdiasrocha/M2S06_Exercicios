@@ -1,4 +1,5 @@
 import React from "react";
+import Task from "./Task";
 
 const ToDo = (props) => {
     const { tasks } = props;
@@ -7,7 +8,7 @@ const ToDo = (props) => {
     <div>
       <ul>
         {tasks.map((task, index) => (
-            <li key={index}>{task}</li>
+            <Task key={index} task={task} />
         ))}
       </ul>
     </div>
