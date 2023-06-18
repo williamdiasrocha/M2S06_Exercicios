@@ -1,12 +1,14 @@
 import React from "react";
 
-const ToDo = () => {
+const ToDo = (props) => {
+    const { tasks } = props;
+
   return (
     <div>
       <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
+        {tasks.map((task, index) => (
+            <li key={index}>{task}</li>
+        ))}
       </ul>
     </div>
   );
